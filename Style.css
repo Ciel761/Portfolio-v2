@@ -1,0 +1,176 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;    
+}
+
+
+#navi{
+    height: 100vh;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.section{
+    width: 100vw;
+    position: absolute;
+    color: cornflowerblue;
+}
+
+.left-column{
+    font-family: monospace;
+    font-size: 10pt;
+    position: absolute;
+    left: 1em;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.right-column{
+    position: absolute;
+    right: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+#naviHeader{
+    bottom: 90vh;
+    height: 10vh;
+}
+
+#naviBody{
+    bottom: 10vh;
+    height: 70vh;
+    align-items: self-end;
+    
+}
+
+#naviBody.right-column {
+    height: inherit;
+    display: flex;
+    align-content: center;
+}
+
+#scrollScreen-2{
+    transition: 0.7s ease-in-out;
+
+}
+
+
+#body{
+    bottom: 0;
+    height: 80vh;
+    align-items: self-end;
+}
+
+#footer{
+    bottom: 10vh;
+    height: 10vh;
+}
+
+#naviFooter{
+    bottom: 0;
+    height: 10vh;
+    transition: 0.5s ease-in-out;
+    
+}
+
+#naviFooterTitle{
+    transition: 1s ease-in-out;
+}
+
+#intro > * {
+    font-family: monospace;
+    margin: 0;
+    color: white;
+}
+
+#intro > div > p {
+    font-family: monospace;
+    margin: 0;
+}
+
+#list-of-content > div {
+    margin-top: 2em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: coral !important; 
+    background-color: aqua;
+    text-decoration: underline;
+}
+
+
+h1 {
+    font-weight: 900;
+    font-size: 5em;
+}
+
+h2 {
+    font-family: monospace ;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.researchItermWrapper{
+    width: 22vh;
+    margin-right: 5vw;
+    margin-top: 1em;
+}
+
+.researchItem {
+    height: 35vh;
+    width: 15vh;
+    background-color: beige;
+    padding:4pt;
+    overflow: hidden;
+    border-radius: 1em;
+    align-content: flex-end;
+    
+}
+
+.researchItem > h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.researchItem > p {
+    font-size: 8pt;
+    font-family: monospace;
+    writing-mode: vertical-rl;
+    text-align: right;
+    margin: 0;
+    
+}
+
+.researchItermDes > {
+    font-size: 10pt;
+}
+
+.dot-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(40, 40px);
+    grid-template-rows: repeat(20, 40px);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .dot {
+    width: 4pt;
+    height: 4pt;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+  }
+  

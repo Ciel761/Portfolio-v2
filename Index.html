@@ -1,10 +1,417 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Siyi Zhu</title>
+<title>Siyi Zhu - HCI Researcher</title>
+<link rel="stylesheet" href="Style.css">
+<script src="scroll_effects.js"></script>
 </head>
 
-<body>
+<body style="height: 300vh;">
+
+
+
+<div class="scrollScreen" id = "navi" style="background-color: cornflowerblue;color: white; width: 100%; position: fixed; top: 0;z-index: 99;">
+    <div class="section" id = "naviHeader">
+        <div class="left-column"><a style="color: white;" href="">Siyi Zhu</a></div>
+        <div class="right-column"><a style="color: white;" href=""></a></div>
+    </div>
+
+    
+    <div class="section" id="naviBody">
+        <div class="left-column" id="list-of-content" style="color: white;">
+            <div>Home</div>
+            <div>Research</div>
+            <div>Design</div>
+            <div>About</div>
+        </div>
+        <div class="right-column">
+
+                <div id="intro">
+                    <div><a style="color: white;" href="mailto:zhusy@umd.edu">zhusy@umd.edu</a></div>
+                    <div><a style="color: white;" href="">Resume / C.V.</a></div>
+                </div>
+                <div style="">
+                <h1 style="margin: 0;overflow: hidden;color: white;font-size: 10VH;">
+                    Siyi Zhu
+                </h1>
+                </div>
+                <div id="intro" style="margin-top: 1em;">
+                    <p style="margin:0;text-align: justify;width: 30vw; line-height: 1.5em;">Siyi Zhu is a PhD Candidate at the University of Maryland, studying Human-computer Interaction. His research explores how emergying technologies can support sensemaking work in scholarly research. He combines design, qualitative methods to investigate user experience how we can better support researchers in navigating complex information spaces.</p>
+                </div>
+
+        </div>
+    </div>
+    <div class="section" id="naviFooter">
+        <div class="left-column">
+            <div><a style="color: white;" href="">Siyi Zhu</a></div>
+        </div>
+        <div class="right-column" id="naviFooterTitle">
+            <div style="position: absolute;color: white;">↓ <a style="color: white;" href="#res">Research</a></div>
+            <div style="position: absolute;color: white; bottom: -20em;"><a style="color: white;" href="#hme">Home</a><br>↑</div>
+            <div style="position: absolute;color: white; bottom: -40em;"><a style="color: white;" href="#res">Research</a><br>↑</div>
+            <div style="position: absolute;color: white; bottom: -60em;"><a style="color: white;" href="#des">Design</a><br>↑</div>
+        </div>
+    </div>
+</div>
+
+<div class="scrollScreen" id = "scrollScreen-2" style="height: 95vh; position: fixed; width: 100%; z-index:2;">
+        <div class="section" id="body">
+            <div class="left-column" style="height: 100%;">
+                <div id="list-of-content">
+                    <div>Home</div>
+                    <div>Research</div>
+                    <div>Design</div>
+                    <div>About</div>
+                </div>
+                <div style="height: 10vh;">
+                    <div><a style="color: cornflowerblue;" href="">Resume / C.V.</a></div>
+                    <div><a style="color: cornflowerblue;" href="mailto:zhusy@umd.edu">zhusy@umd.edu</a></div>
+                </div>
+            </div>
+            <div class="right-column" id="research" style="position: absolute; height: 90vh; transition: 0.5 ease-in-out; z-index: 2;">
+                <div>
+                    <h1 style="margin: 0;overflow: hidden;color: cornflowerblue;">
+                        RESEARCH
+                    </h1>
+
+                    <div id="researchWorks" style="display:flex; margin-bottom: 2em;">
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                <p style="writing-mode: horizontal-tb;text-align: left;">C&C 2025 in Review</p>
+                                <h2><a  href="">Sensing and<br>Senseability</a></h2>
+                            </div>
+                            <div>
+                                <p>How emergying technology can revolutionize the future scholarly knowledge workflow?</p>
+                                <div><a>Learn More</a></div>
+                                <div><a>Read Our Paper</a></div>
+                            </div>
+                        </div>
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                
+                                <p style="writing-mode: horizontal-tb;text-align: left;">UIST 2024</p>
+                                <h2><a  href="">Patterns of<br>Hypertext-augmented<br>Sensemaking</a></h2>
+                                
+                            </div>
+                            <div>
+                                <p>How emergying technology can revolutionize the future scholarly knowledge workflow?</p>
+                                <div><a>Learn More</a></div>
+                                <div><a>Read Our Paper</a></div>
+                            </div>
+                        </div>
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                
+                                <p style="writing-mode: horizontal-tb;text-align: left;">JAMIA Open (2023)</p>
+                                <h2><a  href="">Metaverse-based<br>Workspace for Research</a></h2>
+                            </div>
+                            <div>
+                                <p>How emergying technology can revolutionize the future scholarly knowledge workflow?</p>
+                                <div><a>Learn More</a></div>
+                                <div><a href="https://doi.org/10.1093/jamiaopen/ooad010">Read Our Paper</a></div>
+                            </div>
+                        </div>
+                        <div style="border-color: cornflowerblue;border-width: 2pt;height: 5em;width: 5em;">
+                            →<br><a>Full List</a>
+                        </div>
+                        
+                    </div>
+                      
+                </div>
+                <div  style="height: 10vh;">
+                    <div>↓<br><a style="color: cornflowerblue;" href="#des">Design</a></div>
+                </div>
+            </div>
+            <div class="right-column" id="design" style="position: absolute; height: 90vh; transition: 0.5 ease-in-out; z-index: 2;">
+                <div>
+                    
+                    <h1 style="margin: 0;overflow: hidden;color: cornflowerblue;">
+                        DESIGN
+                    </h1>
+
+                    <div id="designs" style="display:flex;margin-bottom: 2em;">
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                <h2><a  href="">ResDash</a></h2>
+                                <p>2021 Spring</p>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nam consequat eget at duis mi volutpat eget in.</p>
+                                <div><a>Learn More</a></div>
+                                <div><a href="https://doi.org/10.1093/jamiaopen/ooad010">Read Our Paper</a></div>
+                            </div>
+                        </div>
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                <h2><a  href="">Tangible Dial</a></h2>
+                                <p>2020 Fall</p>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nam consequat eget at duis mi volutpat eget in. </p>
+                                <div><a>Learn More</a></div>
+                                <div><a href="https://doi.org/10.1093/jamiaopen/ooad010">Read Our Paper</a></div>
+                            </div>
+                        </div>
+                        <div class="researchItermWrapper">
+                            <div class="researchItem">
+                                <h2><a  href="">Still Surviving</a></h2>
+                                <p>2020 Summer</p>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nam consequat eget at duis mi volutpat eget in. </p>
+                                <div><a>Learn More</a></div>
+                                <div><a href="">Visit Our Website</a></div>
+                            </div>
+                        </div>
+                        <div style="border-color: cornflowerblue;border-width: 2pt;height: 5em;width: 5em;">
+                            →<br><a>Full List</a>
+                        </div>
+                        
+
+                    </div>
+                    </div>
+                <div  style="height: 10vh;">
+                    <div>↓<br><a style="color: cornflowerblue;" href="#abt">About</a></div>
+                </div>
+            </div>
+            <div class="right-column" id="about" style="position: absolute; height: 90vh; transition: 0.5 ease-in-out; z-index: 2;">
+                <div>
+                    <h1 style="margin: 0;overflow: hidden;color: cornflowerblue;">
+                        ABOUT
+                    </h1>
+
+                    <div id="aboutItems" style="display:flex;margin-bottom: 2em;">
+                        <div style="width: 40%;">
+                            <h2><a  href="">Contact Information</a></h2>
+                            <p>Zhu, S., Haisfield R., Langen B., Chan, J. (2024). Patterns of Hypertext-Augmented Sensemaking. In
+                                Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology
+                                (UIST ‘24). Association for Computing Machinery, New York, NY, USA, Article 143, 1–17.
+                                https://doi.org/10.1145/3654777.3676338</p>
+                        </div>
+                        <div style="width: 40%;">
+                            <h2><a  href="">Education</a></h2>
+                            <p>Zhu, S., Haisfield R., Langen B., Chan, J. (2024). Patterns of Hypertext-Augmented Sensemaking. In
+                                Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology
+                                (UIST ‘24). Association for Computing Machinery, New York, NY, USA, Article 143, 1–17.
+                                https://doi.org/10.1145/3654777.3676338</p>
+                        </div>
+                        <div style="width: 40%;">
+                            <h2><a  href="">Skills</a></h2>
+                            <p>Zhu, S., Haisfield R., Langen B., Chan, J. (2024). Patterns of Hypertext-Augmented Sensemaking. In
+                                Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology
+                                (UIST ‘24). Association for Computing Machinery, New York, NY, USA, Article 143, 1–17.
+                                https://doi.org/10.1145/3654777.3676338</p>
+                        </div>
+                    </div>
+                    </div>
+                <div  style="height: 10vh;">
+                    <div>↑ ↑ ↑<br><a style="color: cornflowerblue;" href="#hme">Back to Top</a></div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="hme" style="position: absolute;top: 0vh;"></div>
+<div id="res" style="position: absolute;top: 50vh;"></div>
+<div id="des" style="position: absolute;top: 100vh;"></div>
+<div id="abt" style="position: absolute;top: 200vh;"></div>
+
+<div class="dot-grid" style="z-index: 0;position: fixed;left: 30vw;">
+    <!-- Repeat this as needed, or generate with JS -->
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <!-- ... -->
+  </div>
+
 </body>
 </html>
