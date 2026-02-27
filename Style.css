@@ -1,6 +1,7 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0;    
+    margin: 0;
+    font-size: 18px;
 }
 
 
@@ -18,7 +19,7 @@ body {
 
 .left-column{
     font-family: monospace;
-    font-size: 10pt;
+    font-size: 12pt;
     position: absolute;
     left: 1em;
     width: 20vh;
@@ -146,7 +147,7 @@ h2 {
 }
 
 .researchItem > p {
-    font-size: 8pt;
+    font-size: 10pt;
     font-family: monospace;
     writing-mode: vertical-rl;
     text-align: right;
@@ -155,7 +156,7 @@ h2 {
 }
 
 .researchItermDes > {
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 .dot-grid {
