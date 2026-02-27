@@ -83,7 +83,23 @@ body {
 }
 
 #naviFooterTitle{
-    transition: 1s ease-in-out;
+    transition: top 1s ease-in-out;
+}
+
+#naviFooterTitle > div {
+    padding-top: 0.8em;
+}
+
+#research, #design, #about {
+    transition: bottom 0.7s ease-in-out;
+}
+
+#research {
+    bottom: 0;
+}
+
+#design, #about {
+    bottom: -100vh;
 }
 
 #intro > * {

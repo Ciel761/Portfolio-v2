@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
     hasResized = false;
   } else {
     res.style.bottom="100vh" // change to any height you want
-    des.style.bottom="1000vh"
+    des.style.bottom="100vh"
     abt.style.bottom="0vh"
     naviFooterTitle.style.top="-57.5em";
     hasResized = false;
