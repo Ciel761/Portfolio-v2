@@ -285,3 +285,17 @@ h2 {
     margin-right: 40vw;
 }
   
+
+#scrollScreen-2 #list-of-content {
+    transition: transform 0.3s ease-in-out;
+}
+
+#scrollScreen-2 #list-of-content.compressed > div {
+    margin-top: 2em;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+#scrollScreen-2 #list-of-content > div {
+    margin-top: 5em;
+    transition: margin-top 0.3s ease-in-out;
+}

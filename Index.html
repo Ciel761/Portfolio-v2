@@ -24,7 +24,7 @@
             <div><a style="color: white;" href="#des">Design</a></div>
             <div><a style="color: white;" href="#abt">About</a></div>
         </div>
-        <div class="right-column">
+        <div class="right-column" style="">
 
                 <div id="intro">
                     <div><a style="color: white;" href="mailto:zhusy@umd.edu">zhusy@umd.edu</a></div>
@@ -42,11 +42,18 @@
         </div>
     </div>
     <div class="section" id="naviFooter">
-        <div class="left-column">
+        <div class="left-column" id="naviFooterName">
             <div><a style="color: white; padding-top: .8em;" href="">Siyi Zhu</a></div>
         </div>
         <div class="right-column" id="naviFooterTitle">
-            <div style="position: absolute;color: white;">↓ <a style="color: white;" href="#res">Research</a></div>
+            <svg width="10" height="2000" style="position:absolute; transform: rotate(180deg);left:-1em; bottom:-3em;">
+                <line x1="5" y1="0" x2="0" y2="5" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="0" x2="5" y2="75" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="0" x2="10" y2="5" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="300" x2="5" y2="500" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="1200" x2="5" y2="2000" stroke="white" stroke-width="1px" />
+            </svg>
+            <div style="position: absolute;color: white; left: 1em;"><a style="color: white;" href="#res">Research</a></div>
             <div style="position: absolute;color: white; bottom: -21em;"><a style="color: cornflowerbluete;" href="#hme">↑ Home</a></div>
             <div style="position: absolute;color: white; bottom: -41em;"><a style="color: cornflowerbluete;" href="#res">↑ Research</a></div>
             <div style="position: absolute;color: white; bottom: -61em;"><a style="color: cornflowerbluete;" href="#des">↑ Design</a></div>
@@ -57,7 +64,11 @@
 <div class="scrollScreen" id = "scrollScreen-2" style="height: 95vh; position: fixed; width: 100%; z-index:2;">
         <div class="section" id="body">
             <div class="left-column" style="height: 100%;">
-                <div id="list-of-content">
+                <svg width="2" height="2000" style="position:absolute;bottom:12vh;">
+                    <line x1="0" y1="0" x2="0" y2="2000" stroke="#6495ED" stroke-width="2px" />
+                </svg>
+                <div id="list-of-content" style="margin-left: 1em;z-index:99;">
+                    
                     <div><a style="color: cornflowerblue;" href="#hme">Home</a></div>
                     <div><a style="color: cornflowerblue;" href="#res">Research</a></div>
                     <div><a style="color: cornflowerblue;" href="#des">Design</a></div>
@@ -202,7 +213,7 @@
                         ABOUT
                     </h1>
 
-                    <div class="projectsAndItems" id="about" style="display:flex;margin-bottom: 2em;">
+                    <div class="projectsAndItems" id="aboutItems" style="display:flex;margin-bottom: 2em;">
                         <div class="aboutItemWrapper" id="firstItem">
                             <div class="aboutItem">
                                 <h2><a href="">Contacts</a></h2>
