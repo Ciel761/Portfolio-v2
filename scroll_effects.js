@@ -75,6 +75,16 @@ setupOverlapListener(researchWorks);
 setupOverlapListener(designs);
 setupOverlapListener(aboutItems);
 
+let aboutCardVisible = false;
+const aboutItemCard = document.getElementById("aboutItemCard");
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    aboutCardVisible = entry.isIntersecting;
+    dotGrid.style.opacity = aboutCardVisible ? "1" : ".2";
+  });
+}, { threshold: 0.1 });
+cardObserver.observe(aboutItemCard);
+
 
 
 
@@ -117,7 +127,7 @@ window.addEventListener("scroll", () => {
     des.style.bottom="100vh"
     abt.style.bottom="0vh"
     naviFooterTitle.style.top="-57.5em";
-    dotGrid.style.opacity=".2";
+    dotGrid.style.opacity = aboutCardVisible ? "1" : ".2";
     setActiveNav("#abt");
 
   }

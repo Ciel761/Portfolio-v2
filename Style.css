@@ -95,11 +95,11 @@ body {
 
 .section-bg {
     position: absolute;
-    left: -40vw;
+    left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -99;
 }
 
 #research {
@@ -199,6 +199,9 @@ h2 {
     overflow: visible;
     border-radius: 1em;
     align-content: flex-end;
+    box-shadow:
+        /* 30px 60px 0px rgba(0, 0, 30, 0.45), */
+        -60px 200px 30px rgba(0, 0, 30, 0.2);
 }
 
 #aboutItemCard {
@@ -213,6 +216,9 @@ h2 {
     background-color: darkblue;
     overflow: visible;
     border-radius: 1em;
+    box-shadow:
+        /* 30px 60px 0px rgba(0, 0, 30, 0.45), */
+        -60px 200px 30px rgba(0, 0, 30, 0.2);
 }
 
 .researchItem > img, .designItem > img {
