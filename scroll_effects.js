@@ -102,6 +102,7 @@ window.addEventListener("scroll", () => {
     des.style.bottom="-100vh"
     abt.style.bottom="-100vh"
     dotGrid.style.opacity="1";
+    setActiveNav("#res");
 
   } else if (scrollY >= 1 *screenHeight, scrollY < 1.8*screenHeight) {
     res.style.bottom="100vh"
@@ -109,6 +110,7 @@ window.addEventListener("scroll", () => {
     abt.style.bottom="-100vh"
     naviFooterTitle.style.top="-37.5em";
     dotGrid.style.opacity="1";
+    setActiveNav("#des");
 
   } else {
     res.style.bottom="100vh"
@@ -116,6 +118,7 @@ window.addEventListener("scroll", () => {
     abt.style.bottom="0vh"
     naviFooterTitle.style.top="-57.5em";
     dotGrid.style.opacity=".2";
+    setActiveNav("#abt");
 
   }
 
