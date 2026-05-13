@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Siyi Zhu - HCI Researcher</title>
+<link rel="stylesheet" href="../../Style.css">
+<script src="../../scroll_effects.js"></script>
+<style>
+#appleMetaphor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.paralellScrollLayer-0,
+.paralellScrollLayer-1,
+.paralellScrollLayer-2,
+.paralellScrollLayer-2-2,
+.paralellScrollLayer-3 {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    will-change: transform;
+}
+
+.paralellScrollLayer-0 > *,
+.paralellScrollLayer-1 > *,
+.paralellScrollLayer-2 > *,
+.paralellScrollLayer-2-2 > *,
+.paralellScrollLayer-3 > * {
+    position: absolute;
+}
+
+.paralellScrollLayer-0 > .prallaxTop,
+.paralellScrollLayer-1 > .prallaxTop,
+.paralellScrollLayer-2 > .prallaxTop,
+.paralellScrollLayer-2-2 > .prallaxTop,
+.paralellScrollLayer-3 > .prallaxTop {
+    position: relative;
+}
+
+.paralellScrollLayer-0 { z-index: 4; }
+.paralellScrollLayer-1 { z-index: 3; }
+.paralellScrollLayer-2 { z-index: 2; }
+.paralellScrollLayer-2-2 { z-index: 2; }
+.paralellScrollLayer-3 { z-index: 1; }
+
+#appleMetaphor .mainText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+</style>
+</head>
+
+<body style="background-color:black; width: 100vw; overflow-x: hidden;">
+
+
+
+<div class="scrollScreen" id = "navi" style="color: white; width: 100%; position:sticky; top: 0; z-index: 99; overflow: hidden;">
+    <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:scale(1.2);filter:brightness(0.3) blur(40px);">
+        <source src="../../Img/SensiblePlaceHolderBG.mov" type="video/mp4">
+    </video>
+    <script>document.currentScript.previousElementSibling.playbackRate = 0.5;</script>
+    <div class="section" id = "naviHeader">
+        <div class="left-column"><a style="color: white;" href="../../Index.html">Siyi Zhu</a></div>
+        <div class="right-column"><a style="color: white;" href=""></a></div>
+    </div>
+
+
+    <div class="section" id="naviBody">
+        <!-- <div class="left-column" id="list-of-content" style="color: white;">
+            <div><a style="color: white;" href="#hme">Home</a></div>
+            <div><a style="color: white;" href="#res">Research</a></div>
+            <div><a style="color: white;" href="#des">Design</a></div>
+            <div><a style="color: white;" href="#abt">About</a></div>
+        </div> -->
+        <div class="right-column" style="justify-content: flex-end; bottom: 10vh;">
+
+                <div class="backToHome"></div>
+                <div id="intro" style="margin-top: 1em;">
+                    <p style="margin:0;text-align: justify;width: 40vw; line-height: 1.5em; font-size: .8em; color: rgba(255, 255, 255, 0.5); font-family: Helvetica, sans-serif;">Scholarly sensemaking, such as in-depth literature reviewing and problem formulation, is essential for research, but it has traditionally been conducted through text-heavy interfaces like Google Docs, RoamResearch, and Zotero. Furthermore, abstract and qualitative scholarly information, such as quotes, claims, and evidence, is difficult to materialize in forms other than text. However, text does not inherently support the perception of abstract properties of information that researchers are particularly interested in (e.g., qualities, connections, fairness). In this demonstration, we present our design exploration of an extended reality (XR) system that enhances the “sense-ability” of immaterial properties of information to enhance scholarly sensemaking. This design proposes instability as a sensemaking affordance within an immersive sensemaking system, enabling users to quickly identify weaknesses in arguments.</p>
+                </div>
+                <div style="">
+                <h1 id="projectTitle" style="margin: 0;overflow: hidden;color: white;font-size: 6VH;position: relative;bottom: 0;transition: font-size 0.5s ease-in-out, bottom 0.5s ease-in-out;">
+                    Sensible Sensemaking<br>in Extended Reality
+                </h1>
+                </div>
+                
+
+        </div>
+    </div>
+    <div class="section" id="naviFooter">
+        <div class="left-column" id="naviFooterName">
+            <div><a style="color: white; padding-top: .8em;" href="../../Index.html">Siyi Zhu</a></div>
+        </div>
+        <div class="right-column" id="naviFooterTitle">
+            <!-- <svg width="10" height="2000" style="position:absolute; transform: rotate(180deg);left:-1em; bottom:-3em;">
+                <line x1="5" y1="0" x2="0" y2="5" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="0" x2="5" y2="75" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="0" x2="10" y2="5" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="300" x2="5" y2="500" stroke="white" stroke-width="1px" />
+                <line x1="5" y1="1200" x2="5" y2="2000" stroke="white" stroke-width="1px" />
+            </svg> -->
+            <!-- <div style="position: absolute;color: white; left: 1em;"><a style="color: white;" href="#res">Research</a></div> -->
+            <!-- <div style="position: absolute;color: white; bottom: -21em;"><a style="color: cornflowerbluete;" href="#hme">↑ Home</a></div>
+            <div style="position: absolute;color: white; bottom: -41em;"><a style="color: cornflowerbluete;" href="#res">↑ Research</a></div>
+            <div style="position: absolute;color: white; bottom: -61em;"><a style="color: cornflowerbluete;" href="#des">↑ Design</a></div> -->
+        </div>
+    </div>
+</div>
+
+<div class="scrollScreen" id = "scrollScreen-2" style="width: 100%; z-index:2; color: white;">
+        <div class="projectBody" style="margin-top: 100vh;">
+            <div class="projectContent">
+                <div class="mainText"><p style="line-height: 2em;"> Same apple appears smooth to the touch <br><i class="heroDesc" style="color: orange;"><b>but variegated in color to the sight.</b></i> <br>- Sextus Empiricus
+                </p>
+
+                <!-- <p class="heroDesc" style="margin-top: 50vh;">Scholarly sensemaking, such as in-depth literature reviewing and problem formulation, is essential for research, but it has traditionally been conducted through text-heavy interfaces like Google Docs, RoamResearch, and Zotero. Furthermore, abstract and qualitative scholarly information, such as quotes, claims, and evidence, is difficult to materialize in forms other than text. However, text does not inherently support the perception of abstract properties of information that researchers are particularly interested in (e.g., qualities, connections, fairness). In this demonstration, we present our design exploration of an extended reality (XR) system that enhances the “sense-ability” of immaterial properties of information to enhance scholarly sensemaking. This design proposes instability as a sensemaking affordance within an immersive sensemaking system, enabling users to quickly identify weaknesses in arguments. -->
+                </p>
+            </div>
+            </div>
+            <div class="projectContent" style="position: relative;">
+                <div class="mainText" style="position: relative; z-index: 10;">
+                    <h1 style=" font-size: 14vh;font-family:'Helvetica Neue', Helvetica, sans-serif; white-space: nowrap;">
+                        Modalities <span style="font-weight: 900;"><br>determine<br> how we sense</span> 
+                    </h1>
+                    <p class="heroDesc" style="margin-top: 80vh;">The way we make sense of information are shaped by the modalities of how we perceive them.
+                    </p>
+
+                    <p class="heroDesc" style="margin-top: 80vh;">
+                        A colorful image of an apple provides valuable information about its variety, ripeness, and the environment in which it is located. 
+                    </p>
+
+                    <p class="heroDesc" style="margin-top: 90vh;">
+                        Despite the absence of visual cues, the haptic sensory information from our hand can intuitively provide us with an immediate assessment of the freshness of an apple based on its texture and firmness.
+                    </p>
+
+                    <p class="heroDesc">
+                        Conversely, some other modalities varies our ability to process information. 
+                    </p>
+
+                    <p class="heroDesc">
+                        Plain text for instance, conveying the same amount of information of an apple through it would result in an increase in the length of articulation and require extended human cognitive effort to comprehend.
+                    <!-- <br>But we should acknowledge that this human curated format of information provides a precise and guided view of information help people to quickly focus on the most important information provided by an author. -->
+                    </p>
+                </div>
+                <div class="paralellScrollLayer-1">
+                    <div style="top:-100vh;left:-35vw;width:80vw;height:90vh;overflow: hidden; "><video class="paralellScrollLayer-2-2" autoplay muted loop playsinline style="width:120%;height:300%;object-fit: cover;filter: blur(10px); margin: -10px; margin-top: -60vh; top: -20vh;" onloadedmetadata="this.playbackRate=0.8;">
+                        <source src="../../Img/SensibleSenesmakingXR/frozen-apple_2160_4096_25fps.mp4" type="video/mp4">
+                        <!-- <script>document.currentScript.previousElementSibling.playbackRate = 0.2;</script> -->
+                    </video></div>
+                    
+                    <video autoplay muted loop playsinline style="top:220vh;left:-20vw;width:60vw;">
+                        <source src="../../Img/SensibleSenesmakingXR/cutting-apple_1920_1080_24fps.mp4" type="video/mp4">
+                    </video>
+                    <div style="font-size: 2vh; top:310vh;left:-35vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Times New Roman', Times, serif;">
+                        <p>“The groundcolor of ripe apples is yellow, green, yellow-green or whitish yellow. The overcolor of ripe apples can be orange-red, pink-red, red, purple-red or brown-red. The overcolor amount can be 0–100%. The skin may be wholly or partly russeted, making it rough and brown. The skin is covered in a protective layer of epicuticular wax. The skin may also be marked with scattered dots. The flesh is generally pale yellowish-white, though it can be pink, yellow or green.” <br>- Wikipedia.com</p>
+                    </div>
+                    <div style="font-size: 2vh; top:380vh;left:-30vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: cursive;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                    <div style="font-size: 2vh; top:350vh;left:10vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“The window panes reflected apples, reflected roses; all the leaves were green in the glass. If they moved in the drawing room, the apple only turned its yellow side.” <br>- Virginia Woolf, A Haunted House in Monday or Tuesday</p>
+                    </div>
+                    
+                </div>
+                <div class="paralellScrollLayer-2"style="filter:blur(3px); font-size: 1.5vh;">
+                    
+                    <img style="width: 40vw; height: 60vh; object-fit: cover; left: -30vw;top: 160vh; filter: brightness(.8);" src="../../Img/SensibleSenesmakingXR/apple-tree.jpg">
+                    <div class="dynamicBlur" style="top:350vh;left:20vw;width:30vw;color:rgba(255, 255, 255, 0.5);">
+                        <p>“Early apples begin to be ripe about the first of August; but I think that none of them are so good to eat as some to smell. One is worth more to scent your handkerchief with than any perfume which they sell in the shops. The fragrance of some fruits is not to be forgotten, along with that of flowers.” - Henry David Thoreau, Wild Apples</p>
+                    </div>
+                    <div class="dynamicBlur" style=" top:320vh;left:-10vw;width:30vw;color:rgba(255, 255, 255, 0.3);">
+                        <p>“he boy is indeed the true apple-eater, and is not to be questioned how he came by the fruit with which his pockets are filled. It belongs to him…His own juicy flesh craves the juicy flesh of the apple. Sap draws sap. His fruit-eating has little reference to the state of his appetite. Whether he be full of meat or empty of meat he wants the apple just the same. Before meal or after meal it never comes amiss. The farm-boy munches apples all day long.” - John Burroughs, Birds and Bees</p>
+                    </div>
+                    <div style=" top:340vh;left:-30vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“The window panes reflected apples, reflected roses; all the leaves were green in the glass. If they moved in the drawing room, the apple only turned its yellow side.” <br>- Virginia Woolf, A Haunted House in Monday or Tuesday</p>
+                    </div>
+                    <div style=" top:380vh;left:-5vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                    <div style=" top:330vh;left:30vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“The groundcolor of ripe apples is yellow, green, yellow-green or whitish yellow. The overcolor of ripe apples can be orange-red, pink-red, red, purple-red or brown-red. The overcolor amount can be 0–100%. The skin may be wholly or partly russeted, making it rough and brown. The skin is covered in a protective layer of epicuticular wax. The skin may also be marked with scattered dots. The flesh is generally pale yellowish-white, though it can be pink, yellow or green.” <br>- Wikipedia.com</p>
+                    </div>
+                    <div style=" top:390vh;left:-35vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“The groundcolor of ripe apples is yellow, green, yellow-green or whitish yellow. The overcolor of ripe apples can be orange-red, pink-red, red, purple-red or brown-red. The overcolor amount can be 0–100%. The skin may be wholly or partly russeted, making it rough and brown. The skin is covered in a protective layer of epicuticular wax. The skin may also be marked with scattered dots. The flesh is generally pale yellowish-white, though it can be pink, yellow or green.” <br>- Wikipedia.com</p>
+                    </div>
+                    <div style=" top:410vh;left:20vw;width:30vw;color:rgba(255, 255, 255, 0.5); font-family: 'Courier New', Courier, monospace;">
+                        <p>“he boy is indeed the true apple-eater, and is not to be questioned how he came by the fruit with which his pockets are filled. It belongs to him…His own juicy flesh craves the juicy flesh of the apple. Sap draws sap. His fruit-eating has little reference to the state of his appetite. Whether he be full of meat or empty of meat he wants the apple just the same. Before meal or after meal it never comes amiss. The farm-boy munches apples all day long.” <br>- John Burroughs, Birds and Bees</p>
+                    </div>
+                </div>
+                <div class="paralellScrollLayer-2-2">
+                </div>
+                <div class="paralellScrollLayer-3"style="filter:blur(4px);color:rgba(255, 255, 255, 0.2); font-size:1vh;  ">
+                    <img style="left: 30vw; width: 30vw;  top: 140vh; filter:blur(4px);" src="../../Img/SensibleSenesmakingXR/apple-close-up.jpg" alt="">
+                    <div class="dynamicBlur" style="top:400vh;left:40vw; width: 20vw;">
+                        <p>“he boy is indeed the true apple-eater, and is not to be questioned how he came by the fruit with which his pockets are filled. It belongs to him…His own juicy flesh craves the juicy flesh of the apple. Sap draws sap. His fruit-eating has little reference to the state of his appetite. Whether he be full of meat or empty of meat he wants the apple just the same. Before meal or after meal it never comes amiss. The farm-boy munches apples all day long.” <br>- John Burroughs, Birds and Bees</p>
+                    </div>
+                    <div class="dynamicBlur" style=" top:450vh;left:0; width: 15vw;">
+                        <p>“Early apples begin to be ripe about the first of August; but I think that none of them are so good to eat as some to smell. One is worth more to scent your handkerchief with than any perfume which they sell in the shops. The fragrance of some fruits is not to be forgotten, along with that of flowers.” - Henry David Thoreau, Wild Apples</p>
+                    </div>
+                    <div style=" top:380vh;left:-5vw; width: 15vw; font-family: 'Courier New', Courier, monospace;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                    <div style=" top:380vh;left:-5vw; width: 20vw; font-family: 'Courier New', Courier, monospace;">
+                        <p>“The apple is a sturdy tree. Short of trunk and short of continuous limb, it is yet a stout and rugged object, the indirectness of its branching branches adding to its picturesque quality. It is a tree of good structure. Although its limbs eventually arch to the ground, if left to themselves, they yet have great strength. The angularity of the branching, the frequent forking, the big healing or hollow knots with rounding callus-lips, give the tree character.” <br>- L. H. Bailey, The Apple-Tree</p>
+                    </div>
+                    <div style=" top:480vh;left:35vw; width: 15vw; font-family: 'Courier New', Courier, monospace;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                    <div style=" top:420vh;left:5vw; width: 15vw; font-family: 'Courier New', Courier, monospace;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                    <div style=" top:420vh;left:-40vw; width: 15vw; font-family: 'Courier New', Courier, monospace;">
+                        <p>“In the orchards piles of red and of yellow apples shone in the sunlight, and when one still depended from the tree it was as bright as a gilt ball on a Christmas-tree.” <br>- Frank Bolles, At the North of Bearcamp Water</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectContent">
+                <div class="mainText">
+                    <div class="mainText">
+                        <h1 style="margin-top: 20vh; font-size: 3vw; font-weight: 900;">
+                        What is 
+                        <br>an alternative modality
+                        <span class="heroDesc" style="font-size: 3vw;">
+                        <br>that can enable us to 
+                        <span  style=" color: orange;">
+                        <br><span style="left: -0.75ch; position: relative;">"taste the sweatness"</span>
+                        <br>of science 
+                        </span>
+                        ?</span>
+                        <br>                        
+                    </h1>
+                    
+                    
+
+                    <p class="heroDesc" style="margin-top: 10vh; font-weight: 100;">
+
+                        Scholarly sensemaking is the process through which researchers synthesize scattered pieces of information into novel insights and research directions. Much of this work is currently conducted through text, which serves as the primary medium for processing, organizing, and communicating scholarly information. However, we speculate that text need not be the only modality through which researchers make sense of scholarly information. 
+                        <!-- In this project, we explore whether non-text modalities can offer new ways for researchers to perceive, experience, and reason about the attributes of scientific information. -->
+                        
+                    </p>
+                    </div>
+
+                    <p class="heroDesc">
+                        Embodied interaction
+                    </p>
+
+                    <div class="mainText" style="margin-top: 60vh; position: relative;">
+                        <p class="heroDesc" style="z-index: 10; position: relative;">
+                        Researchers have proposed an extended number of applications to translate quantitative and inherently geo-spatial information into modalities that is different from text.
+                        </p>
+                        <div class="referencedImages heroDesc" style="position: absolute; top: -45vh;">
+                            <div class="referencedPaperImage" style="left: 30vw; top:40vh;">
+                                <img style="" src="../../Img/SensibleSenesmakingXR/ImgFromPapers/EmbodiedPorvenance.png">
+                                <p class="reference" style="">
+                                    Yidan Zhang, Barrett Ens, Kadek Ananta Satriadi, Ying Yang, and Sarah Goodwin. 2023. Embodied Provenance for Immersive Sensemaking. Proceedings of the ACM on Human-Computer Interaction 7, ISS: 198–216.
+                                </p>
+                            </div>
+                            <div class="referencedPaperImage" style="left: -45vw; top:15vh;">
+                                <img style="" src="../../Img/SensibleSenesmakingXR/ImgFromPapers/EmbodiedInteractionEnergy.png">
+                                <p class="reference" style="">
+                                    Andrew Cunningham, Jonathon Derek Hart, Ulrich Engelke, Matt Adcock, and Bruce H. Thomas. 2021. Towards Embodied Interaction for Geospatial Energy Sector Analytics in Immersive Environments. Proceedings of the Twelfth ACM International Conference on Future Energy Systems, ACM, 396–400.
+
+                                </p>
+                            </div>
+                            <div class="referencedPaperImage" style="left: -45vw; top:55vh;">
+                                <img style="" src="../../Img/SensibleSenesmakingXR/ImgFromPapers/MapsAroundMe.png">
+                                <p class="reference" style="">
+                                    Kadek Ananta Satriadi, Barrett Ens, Maxime Cordeil, Tobias Czauderna, and Bernhard Jenny. 2020. Maps Around Me: 3D Multiview Layouts in Immersive Spaces. Proceedings of the ACM on Human-Computer Interaction 4, ISS: 1–20.
+
+                                </p>
+                            </div>
+                            <div class="referencedPaperImage" style="left: 30vw; top:80vh;">
+                                <img style="" src="../../Img/SensibleSenesmakingXR/ImgFromPapers/DatAR.png">
+                                <p class="reference" style="">
+                                    Ivar Troost, Ghazaleh Tanhaei, Lynda Hardman, and Wolfgang Hürst. 2021. Exploring Relations in Neuroscientific Literature using Augmented Reality: A Design Study. Designing Interactive Systems Conference 2021, ACM, 266–274.
+                                </p>
+                            </div>
+                            <div class="referencedPaperImage" style="left: 30vw; top:0vh;">
+                                <img style="filter: brightness(0.1);" src="../../Img/SensibleSenesmakingXR/ImgFromPapers/Litforager.png">
+                                <p class="reference" style="">
+                                    Haoyang Yang, Elliott H. Faa, Weijian Liu, Shunan Guo, Duen Horng Chau, and Yalong Yang. 2025. LitForager: Exploring Multimodal Literature Foraging Strategies in Immersive Sensemaking. Retrieved August 22, 2025 from http://arxiv.org/abs/2508.15043.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <p class="heroDesc" style="margin-top: 80vh;">
+                        Yet most of these alternative modalities are still limited to representing qualitative information that is difficult to quantify or not inherently geospatial, even as advances in large language models now make it possible to process qualitative information rapidly and at scale.
+                    </p>
+                    
+                    <div class="heroDesc" style="position: relative;left: 10vw; font-size: 2vh;margin-top: 50vh;height: 25vh;">
+                    <p >
+                        Through a systematic literature review, we identified that not all qualitative scholarly information are materialized in a stable format (e.g., research directions, theories) and not all critical properties of scholarly informations are tangible enough for researchers to sense directly (e.g., context, turthlikeness, completeness, exovacativeness)[1].
+                    </p>
+                    <p>
+                        For example, <b>Structure</b> describes relations between internal elements
+                        of information objects. Formal academic
+                        documents have structures for their contents. Scholars’ notes can also be <i>“under-structured”</i> or
+                        <i>“overly structured”</i>. The property structure also
+                        describes a hierarchical relationship (e.g., <i>“a tree of”</i>,
+                        <i>“branches of”</i>, and <i>“hierarchical”</i>).
+                    </p>
+                    <p>
+                        <b>Quality</b> represents the strength of an information object.
+                        Immaterial information objects like research works
+                        and research ideas have this property. For example, if
+                        research work is low in quality, it might be described as
+                        a <i>“reluctant study”</i>. On the other hand, if an idea is
+                        high in quality, it may be described as having <i>“value”</i>
+                        or being <i>“creative and unique”</i>.
+                    </p>
+                    <p>
+                        <span style="font-weight: 100;font-size: .8em;">[1] Zhu, S. and Chan, J. 2025. Sense and Sensability: Exploring Future Immersive Environments for Scholarly Sensemaking. Proceedings of the 2025 Conference on Creativity and Cognition (New York, NY, USA, June 2025), 886–901.</span>
+                    </p>
+                    
+                    </div>
+                    <img class="heroDesc" style="position: relative;top: -25vh; left: -35vw; filter: brightness(.8); width: 40vw;" src="../../Img/SensibleSenesmakingXR/Toolkit.png">
+                    
+                    <p class="heroDesc" style="font-size: 5vh;font-weight: 900;">
+                        How can we offer an alternative modality to support sensing of immaterial scientific information that text alone is insufficient for making sense of it?
+                    </p>
+                    <p class="heroDesc">
+                        Our current design hypothesis is 
+                        <br><span class="heroDesc">instability.</span>
+                    </p>
+                    <p class="heroDesc">
+                        [A description of why instabitliy]
+                        <br>
+                        We will wrap up our design through a series of scenarios
+                        <br>
+                        Scenario 1 Theory building with large qualitative data
+                        <br>
+                        Scenario 2 Review constructured theories
+                    </p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="projectContent-2" >
+                <div class="mainText" style="width: 60vw;">
+                    <div style="">
+                        <p style="width: 30vw;">
+                                A researcher whose work focuses on K–12 education is conducting an interview study to investigate how recent developments in AI affect student learning. The study aims to identify guidelines that educators can use to promote responsible AI use in educational settings. Over the past few months, the researcher has collected 30 closely related empirical studies and conducted a pilot interview study with five K–12 teachers. They plan to share their preliminary findings at a conference whose paper submission deadline is in two weeks.
+                        </p>
+                        <div class="" style="margin-top: 20vh;margin-top: 40vh;">
+                        <!-- <h2>
+                            Sensemkaing Issue 1
+                        </h2> -->
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div  style="position: relative; overflow: visible; ">
+                            <div class="cardChildren" style="position: relative; overflow: visible; overflow: scroll; width: fit-content;top: 70vh;padding-left: 40vw;padding-bottom: 10vh; width: 60vw;">
+                                <div>
+                                <h3 class="disappearOnHover">
+                                    Sensemkaing Issue
+                                </h3>
+                                <p>
+                                    Given limited time and manpower, the researcher wants to identify which parts of their emerging theory or guideline are weakly supported, logically unclear, or contradicted by evidence as they synthesize findings from prior studies and pilot interviews.
+                                </p>
+                                </div>
+                                
+                                <div  style="position: relative; overflow: hidden; ">
+                                    <h3 class="disappearOnHover" style="position: relative; z-index: 1;">
+                                    Merging
+                                    </h3>
+                                    <p class="disappearOnHover" style="position: relative; z-index: 1;">
+                                        When a researcher grab one entity and put it on another similar entity, the two entity will merge together, connecting two statements together.
+                                    </p>
+                                    <video class="clearOnHover" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(.8) blur(2px);">
+                                        <source src="../../Img/SensibleSenesmakingXR/DemoMerge.mov" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div  style="position: relative; overflow: hidden; ">
+                                    <div>
+                                        <h3 class="disappearOnHover" style="position: relative; z-index: 1;">
+                                            Hypothesis Making
+                                        </h3>
+                                        <p class="disappearOnHover" style="position: relative; z-index: 1;">
+                                            When a researcher hypothesizes that their might be some relation between two entities, they can drag to make a hypothetical connection between two entities.
+                                        </p>
+                                    </div>
+                                    
+                                    <video class="clearOnHover" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(.8) blur(2px);">
+                                        <source src="../../Img/SensibleSenesmakingXR/DemoHypothesisMaking.mov" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div  style="position: relative; overflow: hidden;margin-right: 20vw; ">
+                                    <h3 class="disappearOnHover" style="position: relative; z-index: 1;">
+                                    Oscillating
+                                    </h3>
+                                    <p class="disappearOnHover" style="position: relative; z-index: 1;">
+                                        
+                                        When a researcher connects two seemingly comparable statements that cannot be generalized from one to the other, the system will create an uncomfortable oscillating movement to indicate the instability caused by this weak connections.
+                                    </p>
+                                    <video class="clearOnHover" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(.8) blur(2px);">
+                                        <source src="../../Img/SensibleSenesmakingXR/DemoExpel.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            
+
+
+                            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 110vw; height: 110vh; object-fit: cover; z-index: 0; filter: brightness(.8) blur();">
+                                <source src="../../Img/SensibleSenesmakingXR/Demo2STAs.mp4" type="video/mp4">
+                            </video>
+                    </div>
+            </div>
+
+
+        
+</div>
+
+<div id="hme" style="position: absolute;top: 0vh;"></div>
+<div id="res" style="position: absolute;top: 50vh;"></div>
+<div id="des" style="position: absolute;top: 100vh;"></div>
+<div id="abt" style="position: absolute;top: 200vh;"></div>
+
+
+<script>
+(function() {
+    const heroDescs = document.querySelectorAll(".heroDesc");
+    if (!heroDescs.length) return;
+
+    function update() {
+        const vh = window.innerHeight;
+        const deadZoneUp   = vh * 0.4;
+        const deadZoneDown = vh * 0.2;
+        const fadeZoneUp   = vh * 0.1;
+        const fadeZoneDown = vh * 0.3;
+
+        heroDescs.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const offset = rect.top + rect.height / 2 - vh / 2;
+            let opacity;
+            if (offset < 0) {
+                const dist = -offset;
+                opacity = dist <= deadZoneUp
+                    ? 1
+                    : Math.max(0, 1 - (dist - deadZoneUp) / (fadeZoneUp - deadZoneUp));
+            } else {
+                opacity = offset <= deadZoneDown
+                    ? 1
+                    : Math.max(0, 1 - (offset - deadZoneDown) / (fadeZoneDown - deadZoneDown));
+            }
+            el.style.opacity = opacity;
+        });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();
+
+(function() {
+    const title = document.getElementById("projectTitle");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= 0.3 * window.innerHeight) {
+            title.style.fontSize = ".6em";
+            title.style.bottom = "-18.5vh";
+        } else {
+            title.style.fontSize = "6vh";
+            title.style.bottom = "0";
+        }
+    });
+})();
+</script>
+<script>
+(function () {
+    const layers = [
+        { sel: '.paralellScrollLayer-0', speed: 0.1 },
+        { sel: '.paralellScrollLayer-1', speed: 6 },
+        { sel: '.paralellScrollLayer-2', speed: 12 },
+        { sel: '.paralellScrollLayer-2-2', speed: 12 },
+        { sel: '.paralellScrollLayer-3', speed: 18 },
+    ].map(l => ({ el: document.querySelector(l.sel), speed: l.speed }))
+     .filter(l => l.el);
+
+    window.addEventListener('scroll', () => {
+        layers.forEach(({ el, speed }) => {
+            const ref = el.closest('.projectContent') || el;
+            const rect = ref.getBoundingClientRect();
+            const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+            const clamped = Math.max(0, Math.min(1, progress));
+            el.style.transform = `translateY(${clamped * speed * -120}px)`;
+        });
+    });
+})();
+</script>
+<script>
+(function () {
+    const container = document.querySelector('.referencedImages');
+    if (!container) return;
+    const cards = Array.from(container.querySelectorAll('.referencedPaperImage'));
+    function update() {
+        const rect = container.getBoundingClientRect();
+        const progress = 1 - (rect.top + rect.height / 2) / window.innerHeight;
+        const offset = (progress - 0.5) * 60;
+        cards.forEach((card, i) => {
+            const row = Math.floor(i / 3);
+            const x = row % 2 === 0 ? -offset : offset;
+            card.style.transform = `translateX(${x}px)`;
+        });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+})();
+</script>
+</body>
+</html>

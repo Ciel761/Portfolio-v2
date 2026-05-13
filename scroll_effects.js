@@ -3,27 +3,18 @@ window.onload = function () {
 
     console.log("Page is fully loaded!");
 
-    const dotGrid = document.querySelector(".dot-grid");
-    const cols = 40;
-    const cellSize = 40;
-    const gap = 10;
-    const padding = 20;
-    const availableHeight = dotGrid.clientHeight - padding * 2;
-    const rows = Math.max(1, Math.floor((availableHeight + gap) / (cellSize + gap)));
-    for (let i = 0; i < cols * rows; i++) {
-        const dot = document.createElement("div");
-        dot.className = "dot";
-        dotGrid.appendChild(dot);
-    }
 
 const navi = document.getElementById("navi");
 const naviFooter = document.getElementById("naviFooter");
 const naviFooterName = document.getElementById("naviFooterName");
 const ss2 = document.getElementById("scrollScreen-2");
 const naviFooterTitle = document.getElementById("naviFooterTitle");
-const res = document.getElementById("research");
-const des = document.getElementById("design");
-const abt = document.getElementById("about");
+const res  = document.querySelector(".contentSec1");
+const des  = document.querySelector(".contentSec2");
+const abt  = document.querySelector(".contentSec3");
+const sec4 = document.querySelector(".contentSec4");
+const sec5 = document.querySelector(".contentSec5");
+const sec6 = document.querySelector(".contentSec6");
 
 const scrollTargets = {
   hme: 0,
@@ -62,7 +53,9 @@ const listOfContent = document.querySelector("#scrollScreen-2 #list-of-content")
 
 
 function setupOverlapListener(container) {
+  if (!container) return;
   const firstItem = container.querySelector("#firstItem");
+  if (!firstItem) return;
   container.addEventListener("scroll", () => {
   const navRect = listOfContent.getBoundingClientRect();
   const itemRect = firstItem.getBoundingClientRect();
@@ -75,6 +68,25 @@ setupOverlapListener(researchWorks);
 setupOverlapListener(designs);
 setupOverlapListener(aboutItems);
 
+function setupCenterActiveCard(container) {
+    if (!container) return;
+    const wrappers = Array.from(container.querySelectorAll('.researchItemWrapper, .designItemWrapper'));
+    function updateActive() {
+        const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
+        let closest = null, closestDist = Infinity;
+        wrappers.forEach(w => {
+            const r = w.getBoundingClientRect();
+            const dist = Math.abs(r.left + r.width / 2 - containerCenter);
+            if (dist < closestDist) { closestDist = dist; closest = w; }
+        });
+        wrappers.forEach(w => w.classList.toggle('active', w === closest));
+    }
+    container.addEventListener('scroll', updateActive);
+    updateActive();
+}
+setupCenterActiveCard(researchWorks);
+setupCenterActiveCard(designs);
+
 let aboutCardVisible = false;
 const aboutItemCard = document.getElementById("aboutItemCard");
 const cardObserver = new IntersectionObserver((entries) => {
@@ -83,52 +95,90 @@ const cardObserver = new IntersectionObserver((entries) => {
     dotGrid.style.opacity = aboutCardVisible ? "1" : ".2";
   });
 }, { threshold: 0.1 });
-cardObserver.observe(aboutItemCard);
+if (aboutItemCard) cardObserver.observe(aboutItemCard);
 
 
 
+
+const collapseRange = 0.5 * window.innerHeight;
+const collapsedPx = 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const screenHeight = window.innerHeight;
 
-  if (scrollY < 0.4*screenHeight) {
-    navi.style.height = "100vh"; 
-    naviFooter.style.height = "10vh";
-    ss2.style.bottom="-95vh";// reset to original height
-    naviFooterTitle.style.top="0";
-    naviFooterName.style.top="1.5em";
+  const progress = Math.max(0, Math.min(1, scrollY / collapseRange));
+  navi.style.height = (screenHeight + (collapsedPx - screenHeight) * progress) + "px";
 
-  } else if (scrollY >= 0.4*screenHeight) {
-    navi.style.height = "3em";
+  if (progress >= 1) {
     naviFooter.style.height = "5vh";
-    ss2.style.bottom="0vh"; // change to any height you want
-    naviFooterTitle.style.top="-17.5em";
-    naviFooterName.style.top="2.5em"
-
+    naviFooterTitle.style.top = "-17.5em";
+    naviFooterName.style.top = "2em";
+    ss2.style.bottom = "0vh";
+  } else {
+    naviFooter.style.height = "10vh";
+    naviFooterTitle.style.top = "0";
+    naviFooterName.style.top = "1em";
+    ss2.style.bottom = "-95vh";
   }
-  if (scrollY < 1 *screenHeight) {
-    res.style.bottom="0vh"
-    des.style.bottom="-100vh"
-    abt.style.bottom="-100vh"
+  if (scrollY < 1*screenHeight) {
+    if (res)  res.style.bottom="0vh";
+    if (des)  des.style.bottom="-100vh";
+    if (abt)  abt.style.bottom="-100vh";
+    if (sec4) sec4.style.bottom="-100vh";
+    if (sec5) sec5.style.bottom="-100vh";
+    if (sec6) sec6.style.bottom="-100vh";
     dotGrid.style.opacity="1";
     setActiveNav("#res");
 
-  } else if (scrollY >= 1 *screenHeight, scrollY < 1.8*screenHeight) {
-    res.style.bottom="100vh"
-    des.style.bottom="0vh"
-    abt.style.bottom="-100vh"
+  } else if (scrollY >= 1*screenHeight && scrollY < 1.8*screenHeight) {
+    if (res)  res.style.bottom="100vh";
+    if (des)  des.style.bottom="0vh";
+    if (abt)  abt.style.bottom="-100vh";
+    if (sec4) sec4.style.bottom="-100vh";
+    if (sec5) sec5.style.bottom="-100vh";
+    if (sec6) sec6.style.bottom="-100vh";
     naviFooterTitle.style.top="-37.5em";
     dotGrid.style.opacity="1";
     setActiveNav("#des");
 
-  } else {
-    res.style.bottom="100vh"
-    des.style.bottom="100vh"
-    abt.style.bottom="0vh"
+  } else if (scrollY >= 1.8*screenHeight && scrollY < 2.6*screenHeight) {
+    if (res)  res.style.bottom="100vh";
+    if (des)  des.style.bottom="100vh";
+    if (abt)  abt.style.bottom="0vh";
+    if (sec4) sec4.style.bottom="-100vh";
+    if (sec5) sec5.style.bottom="-100vh";
+    if (sec6) sec6.style.bottom="-100vh";
     naviFooterTitle.style.top="-57.5em";
     dotGrid.style.opacity = aboutCardVisible ? "1" : ".2";
     setActiveNav("#abt");
+
+  } else if (scrollY >= 2.6*screenHeight && scrollY < 3.4*screenHeight) {
+    if (res)  res.style.bottom="100vh";
+    if (des)  des.style.bottom="100vh";
+    if (abt)  abt.style.bottom="100vh";
+    if (sec4) sec4.style.bottom="0vh";
+    if (sec5) sec5.style.bottom="-100vh";
+    if (sec6) sec6.style.bottom="-100vh";
+    dotGrid.style.opacity="1";
+
+  } else if (scrollY >= 3.4*screenHeight && scrollY < 4.2*screenHeight) {
+    if (res)  res.style.bottom="100vh";
+    if (des)  des.style.bottom="100vh";
+    if (abt)  abt.style.bottom="100vh";
+    if (sec4) sec4.style.bottom="100vh";
+    if (sec5) sec5.style.bottom="0vh";
+    if (sec6) sec6.style.bottom="-100vh";
+    dotGrid.style.opacity="1";
+
+  } else {
+    if (res)  res.style.bottom="100vh";
+    if (des)  des.style.bottom="100vh";
+    if (abt)  abt.style.bottom="100vh";
+    if (sec4) sec4.style.bottom="100vh";
+    if (sec5) sec5.style.bottom="100vh";
+    if (sec6) sec6.style.bottom="0vh";
+    dotGrid.style.opacity="1";
 
   }
 
